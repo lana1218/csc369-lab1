@@ -28,6 +28,7 @@ def main():
                             print(json.dumps(lin, indent=4))
                             break
 
+        print()
         print("Count of partition files: 1")
         print(f"Count of lines: {num_lines}")
 
@@ -107,6 +108,7 @@ def main():
                         actor.add(lin['repo']['name'])
         for a in actor:
             print(a)
+
         print()
         print(f"Count of partition files: {num_partitions}")
         print(f"Count of lines: {num_lines}")

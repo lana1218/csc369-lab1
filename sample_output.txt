@@ -1,0 +1,203 @@
+// TC-1 partone.py
+// Tests Requirements: part one
+run partone.py
+> 2021-04-03-15.json
+output:
+index.json and partition00.json - partition07.json
+
+
+// TC-2 parttwo.py
+// Tests Requirements part two query 1
+run parttwo.py
+> 1
+> 15803604621
+output:
+{
+    "id": "15803604621",
+    "type": "WatchEvent",
+    "actor": {
+        "id": 43307989,
+        "login": "likang-github",
+        "display_login": "likang-github",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/likang-github",
+        "avatar_url": "https://avatars.githubusercontent.com/u/43307989?"
+    },
+    "repo": {
+        "id": 221129519,
+        "name": "AobingJava/JavaFamily",
+        "url": "https://api.github.com/repos/AobingJava/JavaFamily"
+    },
+    "payload": {
+        "action": "started"
+    },
+    "public": true,
+    "created_at": "2021-04-03T15:00:00Z"
+}
+
+Count of partition files: 1
+Count of lines: 1
+
+
+// TC-3 parttwo.py
+// Tests Requirements part two query 2
+run parttwo.py
+> 2
+> 15803636154
+> 15803636159
+output:
+{
+    "id": "15803636155",
+    "type": "CreateEvent",
+    "actor": {
+        "id": 76695879,
+        "login": "rajjadhav-hash",
+        "display_login": "rajjadhav-hash",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/rajjadhav-hash",
+        "avatar_url": "https://avatars.githubusercontent.com/u/76695879?"
+    },
+    "repo": {
+        "id": 354321702,
+        "name": "rajjadhav-hash/project38",
+        "url": "https://api.github.com/repos/rajjadhav-hash/project38"
+    },
+    "payload": {
+        "ref": null,
+        "ref_type": "repository",
+        "master_branch": "master",
+        "description": null,
+        "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2021-04-03T15:07:25Z"
+}
+{
+    "id": "15803636158",
+    "type": "PushEvent",
+    "actor": {
+        "id": 81865237,
+        "login": "bahah1488",
+        "display_login": "bahah1488",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/bahah1488",
+        "avatar_url": "https://avatars.githubusercontent.com/u/81865237?"
+    },
+    "repo": {
+        "id": 354306296,
+        "name": "bahah1488/YEAH",
+        "url": "https://api.github.com/repos/bahah1488/YEAH"
+    },
+    "payload": {
+        "push_id": 6842038611,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/main",
+        "head": "bb3d718010492785b7a274d1fbfcb2e3e9180f70",
+        "before": "2aee33675253bb5f1d1b3e56dafba69f2e655bde",
+        "commits": [
+            {
+                "sha": "bb3d718010492785b7a274d1fbfcb2e3e9180f70",
+                "author": {
+                    "name": "bahah1488",
+                    "email": "af4390091d0c2ce30e53b835ffde31dee09b55ee@users.noreply.github.com"
+                },
+                "message": "Update File",
+                "distinct": true,
+                "url": "https://api.github.com/repos/bahah1488/YEAH/commits/bb3d718010492785b7a274d1fbfcb2e3e9180f70"
+            }
+        ]
+    },
+    "public": true,
+    "created_at": "2021-04-03T15:07:25Z"
+}
+{
+    "id": "15803636159",
+    "type": "PushEvent",
+    "actor": {
+        "id": 61800452,
+        "login": "NailikLN",
+        "display_login": "NailikLN",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/NailikLN",
+        "avatar_url": "https://avatars.githubusercontent.com/u/61800452?"
+    },
+    "repo": {
+        "id": 354239000,
+        "name": "praaly/mcmods_habitatsV1",
+        "url": "https://api.github.com/repos/praaly/mcmods_habitatsV1"
+    },
+    "payload": {
+        "push_id": 6842038616,
+        "size": 1,
+        "distinct_size": 1,
+        "ref": "refs/heads/Dev_Nailik",
+        "head": "2d49afe6106be20a33b7d092d1f0375f6dd157c4",
+        "before": "a42e2e82a0cf48a452f2a9ffef17a419a3d8d7b7",
+        "commits": [
+            {
+                "sha": "2d49afe6106be20a33b7d092d1f0375f6dd157c4",
+                "author": {
+                    "name": "NailikLN",
+                    "email": "c64a821435667158a07d143eeae5dfa9a561db39@gmail.com"
+                },
+                "message": "Fix and generation of Titanium",
+                "distinct": true,
+                "url": "https://api.github.com/repos/praaly/mcmods_habitatsV1/commits/2d49afe6106be20a33b7d092d1f0375f6dd157c4"
+            }
+        ]
+    },
+    "public": true,
+    "created_at": "2021-04-03T15:07:25Z"
+}
+Count of partition files: 2
+Count of lines: 13434
+
+
+// TC-4 parttwo.py
+// Tests Requirements part two query 3
+run parttwo.py
+> 3
+output:
+('PushEvent', 59387)
+('CreateEvent', 15950)
+('PullRequestEvent', 7617)
+('WatchEvent', 6181)
+('IssueCommentEvent', 5348)
+('DeleteEvent', 3100)
+('IssuesEvent', 2857)
+('ForkEvent', 2172)
+('PullRequestReviewEvent', 1740)
+('PullRequestReviewCommentEvent', 1061)
+('ReleaseEvent', 523)
+('CommitCommentEvent', 489)
+('PublicEvent', 401)
+('GollumEvent', 339)
+('MemberEvent', 276)
+
+Count of partition files: 8
+Count of lines: 107441
+
+
+// TC-5 parttwo.py
+// Tests Requirements part two query 4
+run parttwo.py
+> 4
+> likang-github
+output:
+AobingJava/JavaFamily
+
+Count of partition files: 8
+Count of lines: 107441
+
+
+// TC-6 parttwo.py
+// Tests Requirements part two query 5
+run parttwo.py
+> 5
+> natar-developer/public_soal_1
+output:
+natar-developer
+
+Count of partition files: 8
+Count of lines: 107441
