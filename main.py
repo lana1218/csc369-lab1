@@ -8,7 +8,6 @@ def chunks(lst, n):
         yield lst[i:i + n]
 
 def main():
-
     test_read = []
     for i in range(8):
         with open(F'partition0{i}.json', 'r', encoding='utf-8') as f:
